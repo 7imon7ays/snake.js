@@ -1,29 +1,26 @@
 game.show = function () {
 
 	var that = this;
-	$('div').remove();
-
+	$('.row').remove();
 	_.each(that.board, function(row, rowIndex){
 
-		var $newDiv = $('<div>');
-		$('body').append($newDiv);
+		var $newDiv = $("<div class='row'>");
+		$('.container-box').append($newDiv);
 
 		_.each(row, function(tile, tileIndex){
-			$newSquare = $('<span>');
+			$newSquare = $("<span class='tile'>");
 
 			if (that.checkBodyPosition(rowIndex, tileIndex)) {
-				$newSquare.html('x')
+				$newSquare.addClass('snake-spot');
 			}
 
 			if (that.apple[0] === rowIndex && that.apple[1] === tileIndex) {
-				$newSquare.html('*')
+				$newSquare.addClass('apple-spot');
 			}
 
 			$newDiv.append($newSquare);
 		});
-
 	});
-
 }
 
 

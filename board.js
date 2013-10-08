@@ -1,9 +1,9 @@
 game.board = []
 
-_.times(50, function(){
+_.times(25, function(){
 	var newRow = [];
 
-	_.times(50, function() {
+	_.times(25, function() {
 		newRow.push([])	;
 	})
 
@@ -11,8 +11,8 @@ _.times(50, function(){
 });
 
 game.placeApple = function () {
-	var randXPos = Math.floor(Math.random() * 50)
-	var randYPos = Math.floor(Math.random() * 50)
+	var randXPos = Math.floor(Math.random() * 25);
+	var randYPos = Math.floor(Math.random() * 25);
 
 	game.apple = [randXPos, randYPos];
 };

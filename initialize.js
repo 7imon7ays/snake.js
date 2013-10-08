@@ -1,7 +1,6 @@
 game.play = function () {
-
 	var that = this;
-	that.placeApple();
+	this.placeApple();
 
 	var intervalID = window.setInterval(
 		function(){

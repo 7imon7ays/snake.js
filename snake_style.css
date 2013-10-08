@@ -2,19 +2,30 @@
 	box-sizing: border-box;
 }
 
-body {
+.container-box {
+  margin: 0 auto;
 	border: 1px solid black;
+  width: 500px;
+  height: 500px;
 }
 
-div {
+.row {
 	clear: both;
-	height:5px;
+	height: 4%;
 	margin: 0 auto;
 	width: 100%;
 }
 
-span {
-	width: 2%;
+.tile {
+	width: 4%;
 	height: 100%;
 	float: left;
+}
+
+.snake-spot {
+  background-color: green;
+}
+
+.apple-spot {
+  background-color: red;
 }

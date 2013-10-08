@@ -68,7 +68,7 @@ Snake.prototype.hitSelf = function () {
 }
 
 Snake.prototype.offscreen = function () {
-	return (this.body[0][0] > 50) || (this.body[0][1] > 50 ||
+	return (this.body[0][0] > 25) || (this.body[0][1] > 25 ||
 					this.body[0][0] < 0) || (this.body[0][1] < 0)
 };
 
