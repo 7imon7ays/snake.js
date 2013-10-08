@@ -32,3 +32,7 @@ game.checkBodyPosition = function (rowIndex, tileIndex) {
 	});
 	return matchFound;
 }
+
+game.updateScore = function () {
+  $('.score').html(this.snake.score);
+};

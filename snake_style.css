@@ -9,6 +9,10 @@
   height: 500px;
 }
 
+.score {
+  float: right;
+}
+
 .row {
 	clear: both;
 	height: 4%;

@@ -22,6 +22,7 @@ Snake.prototype.move = function() {
 	if (!this.foundApple()){
 		this.body.pop();
 	} else {
+    this.score++;
 		game.placeApple();
 	}
 };

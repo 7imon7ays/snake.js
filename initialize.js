@@ -1,12 +1,14 @@
 game.play = function () {
 	var that = this;
 	this.placeApple();
+  this.snake.score = 0;
 
 	var intervalID = window.setInterval(
 		function(){
 			that.snake.move();
 			that.snake.growing = false;
 			that.show();
+      that.updateScore();
 			$(document).keydown(function(event){
 				var keyPressed = event.which;
 				switch(keyPressed) {
@@ -29,5 +31,5 @@ game.play = function () {
 				alert("Game Over!");
 			}
 		},
-		50);
+		5);
 }
