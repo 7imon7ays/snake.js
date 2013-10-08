@@ -1,7 +1,8 @@
 game.play = function () {
 	var that = this;
-	this.placeApple();
+  this.snake = new Snake(0 , 1);
   this.snake.score = 0;
+	this.placeApple();
 
 	var intervalID = window.setInterval(
 		function(){
@@ -28,7 +29,7 @@ game.play = function () {
 			});
 			if (that.snake.offscreen() || that.snake.hitSelf()) {
 				clearInterval(intervalID);
-				alert("Game Over!");
+        game.over();
 			}
 		},
 		5);

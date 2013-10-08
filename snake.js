@@ -73,4 +73,3 @@ Snake.prototype.offscreen = function () {
 					this.body[0][0] < 0) || (this.body[0][1] < 0)
 };
 
-game.snake = new Snake(0 , 1);

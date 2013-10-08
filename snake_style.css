@@ -10,11 +10,13 @@
 }
 
 .score {
-  float: right;
+  position: relative;
+  right: -25px;
+  font-family: monospace;
+  font-size: 30;
 }
 
 .row {
-	clear: both;
 	height: 4%;
 	margin: 0 auto;
 	width: 100%;

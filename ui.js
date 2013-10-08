@@ -36,3 +36,15 @@ game.checkBodyPosition = function (rowIndex, tileIndex) {
 game.updateScore = function () {
   $('.score').html(this.snake.score);
 };
+
+game.over = function () {
+  delete this.snake;
+  $('.container-box').append("<span class='game-over'>Game Over</span>");
+  $(document).keydown(function (event) {
+    if (event.which == 13) {
+      this.removeEventListener("keydown");
+      $('.game-over').remove();
+      game.play();
+    }
+  });
+};
